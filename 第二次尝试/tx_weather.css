@@ -1,0 +1,496 @@
+body {
+  font-size: 3.2vw;
+  background-color: #f4f4f4;
+}
+.all {
+  display: block;
+}
+.all nav {
+  position: relative;
+  width: 100%;
+  color: white;
+  z-index: 10;
+}
+.all nav .btn-return {
+  position: absolute;
+  height: 3.29835082vh;
+  width: 5.86666667vw;
+  left: 1.33333333vw;
+  top: 2.99850075vh;
+  color: white;
+  font-size: 4.8vw;
+}
+.all nav .location {
+  margin: 3.44827586vh 0 0.89955022vh 0;
+  width: 100%;
+  line-height: 2.69865067vh;
+  text-align: center;
+  font-size: 4.26666667vw;
+}
+.all nav .btn-share {
+  position: absolute;
+  height: 3.29835082vh;
+  width: 5.86666667vw;
+  right: 2.13333333vw;
+  top: 2.99850075vh;
+  color: white;
+  font-size: 4.8vw;
+}
+.all nav .methods {
+  display: none;
+  position: fixed;
+  margin-left: -50vw;
+  left: 50%;
+  bottom: 0%;
+  border-radius: 2.66666667vw 2.66666667vw 0 0;
+  background-color: #fff;
+  color: black;
+  z-index: 999;
+}
+.all nav .methods li {
+  margin-left: 4vw;
+  padding: 2.99850075vh 0 1.49925037vh 0;
+  text-align: center;
+}
+.all nav .methods li a {
+  font-size: 15vw;
+}
+.all nav .methods .delete_nav {
+  background-color: transparent;
+  margin-bottom: 0.44977511vh;
+  border: none;
+  border-top: 0.53333333vw solid #e0dfdf;
+  width: 100vw;
+  height: 5vh;
+  font-size: 6.13333333vw;
+}
+.all .relocation {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+.all .pic {
+  width: 100%;
+  height: 70.46476762vh;
+  line-height: 0;
+  text-align: center;
+  color: white;
+  background-color: #93ced2;
+  position: relative;
+}
+.all .pic .temp {
+  padding-right: 2.66666667vw;
+  position: relative;
+  top: 15.5922039vh;
+  font-size: 16.53333333vw;
+}
+.all .pic .temp::after {
+  content: "°";
+}
+.all .pic .weather_condition {
+  padding-top: 6.74662669vh;
+  position: relative;
+  top: 16.49175412vh;
+  font-size: 5.33333333vw;
+}
+.all .pic .more {
+  position: relative;
+  top: 20.98950525vh;
+  font-size: 4vw;
+}
+.all .pic .tips {
+  position: relative;
+  top: 29.9850075vh;
+}
+.all .pic .box_left {
+  display: none;
+  position: relative;
+  margin-left: -31.5vw;
+  top: 25%;
+  left: 50%;
+  background-color: white;
+  border-radius: 2.66666667vw;
+  width: 64.8vw;
+  height: 45vh;
+  color: black;
+  z-index: 999;
+}
+.all .pic .box_left div {
+  position: absolute;
+  width: 64.8vw;
+  height: 29.9850075vh;
+  background-color: #80d2e5;
+  border-radius: 2.66666667vw 2.66666667vw 0 0;
+  color: white;
+}
+.all .pic .box_left div a {
+  position: absolute;
+  right: 1.6vw;
+  top: 1.64917541vh;
+  font-size: 5.33333333vw;
+}
+.all .pic .box_left div h2 {
+  position: absolute;
+  top: 5.24737631vh;
+  width: 100%;
+  text-align: center;
+}
+.all .pic .box_left div #val {
+  position: absolute;
+  top: 13.04347826vh;
+  width: 100%;
+  color: white;
+  font-size: 16vw;
+  text-align: center;
+}
+.all .pic .box_left div #level_in {
+  position: absolute;
+  border-radius: 2.13333333vw;
+  left: 44%;
+  top: 20.23988006vh;
+  width: 9.33333333vw;
+  height: 3.74812594vh;
+  line-height: 3.74812594vh;
+  background-color: #f0cc35;
+  font-size: 3.73333333vw;
+}
+.all .pic .box_left ul {
+  width: 100%;
+  height: 16.49175412vh;
+  position: relative;
+  top: 21.28935532vh;
+  border-top-color: grey;
+}
+.all .pic .box_left ul li {
+  width: 33.333%;
+  height: 8.3958021vh;
+  line-height: 8.3958021vh;
+  font-size: 3.2vw;
+  top: 20.23988006vh;
+  border-left: 0.53333333vw solid #ccc;
+}
+.all .pic .box_left ul li .val {
+  position: relative;
+  top: -0.59970015vh;
+  font-size: 4.2vw;
+  color: black;
+}
+.all .pic .box_left ul li .titl {
+  position: relative;
+  top: -5.9970015vh;
+  font-size: 2.66666667vw;
+  color: grey;
+}
+.all .pic .box_left ul .fLine {
+  border-bottom: 0.53333333vw solid #ccc;
+}
+.all .pic .box_left ul .no {
+  border-left: none;
+}
+.all .pic .box_left img {
+  position: relative;
+  width: 64.8vw;
+  top: -3vh;
+  z-index: 20;
+}
+.all #Box {
+  position: relative;
+  top: 2.99850075vh;
+  left: 2.4vw;
+  width: 9.6vw;
+  height: 6.44677661vh;
+  border-radius: 2.66666667vw;
+  box-shadow: 0px 1px 1px #909090;
+  background-color: #a3d765;
+}
+.all #Box p {
+  position: absolute;
+  top: 1.94902549vh;
+  width: 100%;
+  text-align: center;
+  font-size: 3.73333333vw;
+}
+.all #Box .level {
+  margin-top: 2.3988006vh;
+}
+.weather_box {
+  padding-top: 4.19790105vh;
+  margin-bottom: 1.49925037vh;
+  width: 100%;
+  height: 15.29235382vh;
+  font-size: 3.73333333vw;
+  background-color: #fff;
+}
+.weather_box .weather_today {
+  position: relative;
+  padding: 0 4.8vw;
+  width: 50%;
+  height: 8.99550225vh;
+  border-right: 0.29985007vh solid #c2c1c1;
+}
+.weather_box .weather_today img {
+  position: absolute;
+  top: 2.54872564vh;
+  right: 3.46666667vw;
+  width: 14.66666667vw;
+  height: 8.24587706vh;
+}
+.weather_box .weather_today .weather_cdt {
+  position: absolute;
+  top: 5.24737631vh;
+}
+.weather_box .weather_tomorrow {
+  position: relative;
+  padding: 0 4.8vw;
+  width: 50%;
+}
+.weather_box .weather_tomorrow img {
+  position: absolute;
+  top: 2.54872564vh;
+  right: 3.46666667vw;
+  width: 14.66666667vw;
+  height: 8.24587706vh;
+}
+.weather_box .weather_tomorrow .weather_cdt {
+  position: absolute;
+  top: 5.24737631vh;
+}
+.current_weather {
+  margin-bottom: 1.49925037vh;
+  overflow-x: auto;
+  background-color: #ffffff;
+}
+.current_weather .slide {
+  width: 478.8vw;
+}
+.current_weather .slide ul {
+  height: 22.48875562vh;
+  padding: 1.49925037vh 0;
+}
+.current_weather .slide ul .current_degree {
+  padding-left: 0.53333333vw;
+}
+.current_weather ul > li {
+  width: 15.2vw;
+  height: 11.994003vh;
+  margin: 1.49925037vh 0 5.33333333vw 2.99850075vh;
+  text-align: center;
+}
+.current_weather ul .current_degree::after {
+  content: "°";
+}
+.weather_predict {
+  position: relative;
+  margin-bottom: 1.49925037vh;
+  background-color: #fff;
+  overflow-x: auto;
+}
+.weather_predict #echart_up {
+  position: absolute;
+  top: 18.74062969vh;
+  width: 173.33333333vw;
+  height: 23.53823088vh;
+}
+.weather_predict #echart_down {
+  position: absolute;
+  top: 24.73763118vh;
+  width: 173.33333333vw;
+  height: 23.53823088vh;
+}
+.weather_predict ul {
+  margin: 2.99850075vh 0;
+  width: 156.8vw;
+}
+.weather_predict ul li {
+  width: 22.4vw;
+  color: grey;
+  text-align: center;
+}
+.weather_predict ul li p {
+  padding-bottom: 0.29985007vh;
+}
+.weather_predict ul li .night_yesterday,
+.weather_predict ul li .night {
+  margin-top: 14.99250375vh;
+}
+.cover {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+  z-index: 9;
+}
+.window {
+  display: none;
+  position: fixed;
+  margin-left: -37.33333vw;
+  top: 25%;
+  left: 50%;
+  border-radius: 2.66666667vw;
+  background-color: #fff;
+  z-index: 999;
+}
+.window h3 {
+  height: 8.69565217vh;
+  line-height: 8.69565217vh;
+  border-radius: 2.66666667vw 2.66666667vw 0 0;
+  color: #fff;
+  font-size: 6.66666667vw;
+  text-align: center;
+  background-color: #c1a4e0;
+}
+.window .infor {
+  padding: 4.04797601vh 5.33333333vw;
+  font-size: 3.73333333vw;
+  line-height: 2.99850075vh;
+}
+.window .btn_close {
+  margin-left: 11vw;
+  margin-bottom: 1.49925037vh;
+  border-radius: 2.66666667vw;
+  width: 53.33333333vw;
+  height: 5.9970015vh;
+  line-height: 5.9970015vh;
+  font-size: 4.26666667vw;
+  color: white;
+  background-color: #c1a4e0;
+  border: none;
+}
+.bBox {
+  overflow: hidden;
+  height: 32.98350825vh;
+  background-color: #fff;
+}
+.bBox div {
+  width: 200%;
+}
+.bBox div ul {
+  width: 50%;
+  height: 32.98350825vh;
+}
+.bBox div ul li {
+  width: 25%;
+  height: 50%;
+  border-left: 0.14992504vh solid #e6e6e6;
+  border-bottom: 0.14992504vh solid #e6e6e6;
+  text-align: center;
+}
+.bBox div ul li div {
+  width: 100%;
+  height: 8.99550225vh;
+  line-height: 8.99550225vh;
+  font-size: 9.86666667vw;
+}
+.bBox div ul li #f_line {
+  font-size: 3.73333333vw;
+}
+.bBox div ul li #s_line {
+  color: #817f7f91;
+}
+.tab-content {
+  width: 100%;
+  text-align: center;
+}
+.tab-content span {
+  margin: 0 1.33333333vw;
+  display: inline-block;
+  border-radius: 1.06666667vw;
+  width: 4vw;
+  height: 0.59970015vh;
+  background-color: #e3e3e3;
+}
+.tab-content .current {
+  background-color: #cecece;
+}
+footer {
+  margin-top: 4.49775112vh;
+  text-align: center;
+  height: 18.74062969vh;
+  color: #b2b2b2;
+}
+.else .search {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  display: none;
+  background-color: white;
+}
+.else .search .search_area {
+  padding: 1.1994003vh 0;
+  border-bottom: 0.26666667vw solid #f2f2f2;
+}
+.else .search .search_area div {
+  position: relative;
+}
+.else .search .search_area div img {
+  position: absolute;
+  top: 0.44977511vh;
+  left: 8.53333333vw;
+  height: 2.99850075vh;
+}
+.else .search .search_area div input {
+  width: 80vw;
+  height: 4.19790105vh;
+  padding: 0.74962519vh 0 0.74962519vh 8.53333333vw;
+  border-radius: 4vw;
+  background-color: #f2f2f2;
+}
+.else .search .search_area .search_delete {
+  text-align: center;
+  line-height: 4.19790105vh;
+  width: 13.33333333vw;
+  height: 4.19790105vh;
+  font-size: 3.73333333vw;
+}
+.else .search .below .search_history {
+  display: none;
+  padding: 1.79910045vh 3.46666667vw 1.04947526vh 3.46666667vw;
+  width: 100%;
+  height: 11.994003vh;
+  font-size: 4.26666667vw;
+}
+.else .search .below .search_history .history p {
+  margin-bottom: 1.04947526vh;
+}
+.else .search .below .search_history ul {
+  overflow: hidden;
+  height: 5.9970015vh;
+}
+.else .search .below .search_history ul li {
+  float: left;
+  margin-left: 3.2vw;
+  margin-bottom: 1.34932534vh;
+  width: 26.66666667vw;
+  height: 5.24737631vh;
+  border-radius: 3.37331334vh;
+  text-align: center;
+  line-height: 5.24737631vh;
+  background-color: #f2f2f2;
+}
+.else .search .below .search_city {
+  margin-top: 0.44977511vh;
+  padding: 1.79910045vh 3.46666667vw 1.04947526vh 3.46666667vw;
+  width: 100%;
+  font-size: 4.26666667vw;
+}
+.else .search .below .search_city .pop_city {
+  height: 29.9850075vh;
+}
+.else .search .below .search_city .pop_city p {
+  margin-bottom: 1.04947526vh;
+}
+.else .search .below .search_city .pop_city li {
+  float: left;
+  margin-left: 3.2vw;
+  margin-bottom: 1.34932534vh;
+  width: 26.66666667vw;
+  height: 5.24737631vh;
+  border-radius: 3.37331334vh;
+  text-align: center;
+  line-height: 5.24737631vh;
+  background-color: #f2f2f2;
+}

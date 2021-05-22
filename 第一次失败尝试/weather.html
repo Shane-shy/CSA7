@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,repeat=no">
+    <title>TX weather</title>
+    <link rel="stylesheet" href="weather.css">
+    <link rel="stylesheet" href="iconfont/download/font_jofuy1cqyw/iconfont.css">
+    <script type="text/javascript" src="weather.js"></script>
+</head>
+
+<body>
+    <!-- 从上到下，每个大板块一次为第一第二第三第四 -->
+    <!-- 第一部分开始 -->
+    <div class="first">
+        <header class="nav">
+            <div class="iconfont fanhui">&#xe641;</div>
+            <div class="iconfont weizhi">&#xe608;显示地址</div>
+            <div class="iconfont fenxiang">&#xe61f;</div>
+        </header>
+        <div class="time">中央气象台 XX:XX发布</div>
+        <div class="box">
+            <p class="celan">30</p>
+            <p class="celan">优</p>
+        </div>
+        <div id="dangqian">
+            <!-- 当前温度数据 -->
+            <p class="temprature">25°</p>
+            <p class="tianqi">多云</p>
+            <p class="tips">光芒透过云缝，洒向大地~</p>
+        </div>
+        <div class="jinmingtianqi">
+            <div class="today">今日天气</div>
+            <div class="tomorrow">明日天气</div>
+        </div>
+    </div>
+    <!-- 第一部分结束 -->
+
+    <!-- 第二部分开始 -->
+    <div class="second">这里将是每时每刻的天气情况</div>
+    <!-- 第二部分结束 -->
+
+    <!-- 第三部分开始 -->
+    <div class="third">这里将是折线图</div>
+    <!-- 第三部分结束 -->
+</body>
+
+</html>

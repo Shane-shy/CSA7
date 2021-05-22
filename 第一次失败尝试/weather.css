@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 3.2vw;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.first {
+    position: relative;
+    width: 100%;
+    height: 71.2143928vh;
+    background-image: url("iconfont/weather-background/xue.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+}
+
+.first .nav {
+    width: 100%;
+    height: 5.9970015vh;
+}
+
+.first .nav .iconfont {
+    position: absolute;
+    font-size: 5.86666667vw;
+    color: white;
+}
+
+.first .nav .fanhui {
+    top: 1.49925037vh;
+    left: 0.26666667vw;
+}
+
+.first .nav .weizhi {
+    top: 1.49925037vh;
+    left: 8vw;
+    height: 2.24887556vh;
+    width: 81.33333333vw;
+    text-align: center;
+    font-size: 4.26666667vw;
+}
+
+.first .nav .fenxiang {
+    top: 1.49925037vh;
+    right: 0.8vw;
+}
+
+.first .time {
+    width: 100%;
+    height: 2.24887556vh;
+    color: white;
+    text-align: center;
+}
+
+.first .box {
+    position: absolute;
+    border: 0.14992504vh solid #696868;
+    border-radius: 1.1994003vh;
+    top: 9.89505247vh;
+    left: 2.13333333vw;
+    height: 6.59670165vh;
+    width: 9.86666667vw;
+    background-color: #a3d765;
+}
+
+.first .box .celan {
+    color: white;
+    text-align: center;
+    padding-top: 0.44977511vh;
+}
+
+.first #dangqian p {
+    position: absolute;
+    width: 100vw;
+    font-size: 4.26666667vw;
+    text-align: center;
+    color: white;
+}
+
+.first #dangqian .temprature {
+    top: 16.04197901vh;
+    padding-left: 3.2vw;
+    font-size: 17.33333333vw;
+}
+
+.first #dangqian .tianqi {
+    top: 28.48575712vh;
+    font-size: 5.33333333vw;
+}
+
+.first #dangqian .tips {
+    top: 39.28035982vh;
+}
+
+.first .jinmingtianqi {
+    position: relative;
+    top: 62.66866567vh;
+    width: 100%;
+    height: 14.99250375vh;
+    background-color: #fff;
+}
+
+.first .jinmingtianqi .today {
+    position: absolute;
+    top: 3.74812594vh;
+    left: 0vw;
+    width: 50%;
+    height: 7.49625187vh;
+    background-color: pink;
+}
+
+.first .jinmingtianqi .tomorrow {
+    position: absolute;
+    top: 3.74812594vh;
+    right: 0vw;
+    width: 50%;
+    height: 7.49625187vh;
+    background-color: purple;
+}
+
+.second {
+    position: relative;
+    top: 17.24137931vh;
+    height: 20.98950525vh;
+    background-color: lightblue;
+}
+
+.third {
+    position: relative;
+    top: 19.49025487vh;
+    height: 59.97001499vh;
+    background-color: #3ada77;
+}

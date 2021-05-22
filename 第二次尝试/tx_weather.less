@@ -1,0 +1,559 @@
+ @width : (100vw / 375);  //除法时要加括号,算出1vw对于的像素
+ @height : (100vh / 667);
+ 
+ 
+body{
+    font-size: @width *12;
+    background-color: #f4f4f4;
+}
+
+//基本框架
+.all{
+    display:block;
+    //  头部导航栏
+nav{
+    position: relative;
+    width: 100%;
+    color: white;
+    z-index: 10;
+    .btn-return{
+        position: absolute;
+        height: @height * 22;
+        width: @width * 22;
+        left: @width * 5;
+        top:@height * 20;
+        color: white;
+        font-size:@width * 18;
+}
+    
+    .location{
+        margin:(@height * 23) 0 (@height * 6) 0;
+        width: 100%;
+        line-height:@height *18;
+        text-align:center;
+        font-size: @width *16;
+}
+    .btn-share {
+        position: absolute;
+        height: @height * 22;
+        width: @width * 22;
+        right: @width * 8;
+        top:@height * 20;
+        color: white;
+        font-size:@width * 18;
+    }
+    
+        .methods{
+         display:none;
+         position: fixed;
+         margin-left: -50vw;
+        //  top: 25%;
+         left: 50%;
+         bottom:0%;
+         border-radius:@width * 10 @width * 10 0 0;
+         background-color: #fff;
+         color:black;
+         z-index: 999;
+         li{
+             margin-left:  4vw;
+             padding:@height * 20 0 @height * 10 0;
+             text-align: center;
+             
+             a{
+                 font-size: 15vw;
+             }
+         }
+         .delete_nav{
+             background-color: transparent;
+             margin-bottom: @height * 3;
+             border:none;
+             border-top: @width*2 solid rgb(224, 223, 223);
+             width: 100vw;
+             height: 5vh;
+             font-size: @width *23;
+         }
+        }
+}
+    .relocation{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+
+
+// 中间文字
+.pic{
+    position: relative;
+    width: 100%;
+    height: @height * 470;
+    line-height:0;
+    text-align: center;
+    color: white;
+    background-color: #93ced2;
+    position:relative;
+    .temp{
+        padding-right: @width * 10;
+        position: relative;
+        top:@height * 104;
+        font-size: @width * 62;
+    }
+    .temp::after{//方便之后js直接换数字
+        content:"°";
+    }
+    .weather_condition{
+        padding-top:@height * 45;
+        position: relative;    
+        top:@height * 110;
+        font-size: @width *20;
+    }
+    .more{
+        position: relative;
+        top:@height * 140;
+        font-size: @width *15;
+    }
+    .tips{
+        position: relative;
+        top:@height * 200;
+    }
+    //点击左侧小盒子
+    .box_left{
+         display:none;
+         position: relative;
+        margin-left: -31.5vw;
+         top: 25%;
+         left: 50%;
+         background-color: white;
+         border-radius: @width *10;
+         width: 64.8vw;
+         height: 45vh;
+         color:black;
+         z-index: 999;
+         div{
+            position: absolute;
+             width:64.8vw;
+             height: @height * 200;
+            //  bottom:0;
+             background-color: #80d2e5;
+              border-radius: @width *10  @width *10 0 0;
+             color:white;
+         a{
+             position: absolute;
+             right: @width * 6;
+             top: @height * 11;
+           font-size: @width *20;
+         }
+         h2{ 
+             position: absolute;
+             top: @height * 35;
+             width: 100%;
+             text-align: center;
+         }
+         #val{
+             position: absolute;
+             top: @height * 87;
+             width: 100%;
+             color:white;
+             font-size: @width *60;
+             text-align: center;
+         }
+         #level_in{
+             position: absolute;
+             border-radius: @width * 8;
+             left: 44%;
+             top: @height * 135;
+             width: @width *35;
+             height: @height *25;
+             line-height:@height *25;
+             background-color: #f0cc35;
+             font-size:@width * 14;
+         }
+        }
+        ul{
+            width: 100%;
+            height: @height * 110;
+            position: relative;
+            top:@height * 142;
+            border-top-color:grey;
+            li{
+                width: 33.333%;
+                height: @height*56;
+                line-height:@height * 56;
+                font-size: @width *12;
+                top:@height *135;
+                
+                border-left: @width *2 solid #ccc;
+                .val{
+                    position: relative;
+                    top:@height * -4;
+                    font-size: 4.2vw;
+                    color:black;
+
+                }
+                .titl{
+                    position: relative;
+                    top:@height * -40;
+                    font-size: @width *10;
+                    color:grey;
+                }
+            }
+            .fLine{
+                border-bottom: @width *2 solid #ccc;
+            }
+            .no{
+                border-left: none;
+            }
+        }
+         img{
+        position: relative;
+        width: 64.8vw;
+        top:-3vh;
+        z-index: 20;
+         }
+    }
+    }
+   #Box{
+        position: relative;
+        top:@height * 20;
+        left: @width * 9;
+        width: @width * 36;
+        height: @height * 43;
+        border-radius: @width * 10;
+        box-shadow:0px 1px 1px #909090;
+        background-color: #a3d765;
+   
+        p{
+        position: absolute;
+        top:@height * 13;
+        width: 100%;
+        text-align: center;
+        font-size: @width *14;
+        }
+        .level{
+            margin-top:@height * 16;
+        }
+    }
+   
+}
+
+// 今明两天天气
+.weather_box{
+    
+    padding-top: @height * 28;
+    margin-bottom: @height * 10;
+    width: 100%;
+    height: @height * 102;
+    font-size:@width * 14;
+    background-color: #fff;
+    .weather_today  {
+        position: relative;
+        padding:0 (@width*18);
+        width: 50%;
+        height: @height * 60;
+        border-right: (@height*2) solid #c2c1c1;
+        img{ 
+        position: absolute;
+        top:@height * 17;
+        right: @width * 13;
+        width: @width * 55 ;
+        height: @height * 55;
+        }
+        .weather_cdt{
+        position: absolute;
+        top:@height * 35;
+        
+        }
+    }
+    .weather_tomorrow {
+        position: relative;
+         padding:0 (@width*18);
+        width: 50%;
+
+        img{  
+        position: absolute;
+        top:@height * 17;
+        right: @width * 13;
+        width: @width * 55 ;
+        height: @height * 55;
+    } 
+    .weather_cdt{
+        position: absolute;
+        top:@height * 35;
+        }
+    }
+}
+
+//    时刻天气
+.current_weather {
+    margin-bottom: @height * 10;
+    overflow-x: auto;//对溢出部分进行裁剪，超出框后又滚动条
+    background-color: #ffffff;
+    .slide{
+    width: @width *57*31.5;
+    ul{
+    height: @height *150;
+    padding:@height * 10 0;
+        .current_degree{
+       padding-left: @width * 2; 
+        }
+         }
+    }
+
+}
+.current_weather ul >li {
+    width: @width *57;
+    height: @height * 80;
+    margin:(@height *10) 0 (@width*20) (@height *20);
+    text-align: center;
+}
+
+.current_weather ul .current_degree::after{
+    content: "°";
+}
+
+
+//折线图
+.weather_predict{
+    position: relative;
+    margin-bottom: @height * 10;
+    background-color: #fff;
+    overflow-x: auto;
+    #echart_up{
+        position: absolute;
+        top: @height * 125;
+        width: @width *650;
+        height:@height * 157;
+    }
+    #echart_down{
+        position: absolute;
+        top: @height * 165;
+        width: @width *650;
+        height:@height * 157;
+    }
+    ul{  
+        margin:(@height *20) 0;
+        width: @width *588;
+        li{
+            width: @width * 84;
+            color:grey;
+            text-align: center;
+             p{
+                 padding-bottom:@height * 2;                
+             }    
+             .night_yesterday,.night{
+                 margin-top: @height *100;
+             }        
+        }
+    }
+}
+
+
+//类轮播图
+.cover{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.25);
+    backdrop-filter:blur(2px);
+    z-index: 9;
+     
+}
+ .window{
+     display:none;
+         position: fixed;
+          margin-left: -37.33333vw;
+         top: 25%;
+         left: 50%;
+         border-radius:@width * 10;
+         background-color: #fff;
+         z-index: 999;
+         
+          h3{
+              height: @height * 58;
+              line-height:@height *58;
+              border-radius:@width * 10 @width * 10 0 0;
+              color: #fff;
+              font-size: @width *25;
+              text-align: center;
+              background-color:#c1a4e0;
+          }
+          .infor{
+              padding:(27*@height) (@width * 20);
+              font-size: @width *14;
+              line-height:@height * 20;
+          }
+          .btn_close{
+              margin-left: 11vw;
+              margin-bottom:@height * 10;
+              border-radius:@width * 10;
+               width: @width * 200;
+               height: @height * 40;
+               line-height:@height * 40;
+               font-size: @width *16;
+               color:white;
+               background-color: #c1a4e0;
+               border:none;
+          }
+          
+      }
+.bBox {
+    overflow: hidden;
+    height: @height*220;
+    background-color: #fff;
+    div{
+     width:200%;
+     ul{    
+        // position: absolute;
+        width:50%;
+        height: @height * 220;
+        li{
+            width: 25%;
+            height: 50%;
+            border-left:(@height * 1) solid #e6e6e6;
+            border-bottom:(@height * 1) solid #e6e6e6;
+            text-align: center; 
+            div{
+                width: 100%;
+                height: @height * 60;
+                line-height:@height * 60;
+                font-size: @width * 37;
+            }  
+            #f_line{
+                font-size: @width * 14;
+            }
+            #s_line {
+                //字体不能调小了？
+                color: #817f7f91;
+            }         
+        }
+    }
+    }
+  
+ 
+}   
+
+// 底部小盒子下面的小点
+.tab-content{
+    width: 100%;
+    text-align: center;
+    span{
+        margin:0 @width * 5;
+        display: inline-block;
+        border-radius: @width * 4;
+        width: @width * 15;
+        height: @height * 4;
+        background-color: #e3e3e3;
+    }
+    .current{
+         background-color: #cecece;
+    }
+}
+
+// 结尾
+footer{
+    margin-top: (@height * 30);
+    text-align: center;
+    height: @height * 125;
+    color: #b2b2b2;
+}
+
+
+
+//交互
+.else{
+    .search{//搜索框
+        width: 100vw;
+        height: 100vh;
+        top:0;
+        display: none;
+        background-color: white;
+        .search_area{
+            padding:(@height * 8) 0;
+            border-bottom: @width  solid #f2f2f2;
+            div{
+                position: relative;
+                 img{
+                    position: absolute;
+                    top:@height * 3;
+                    left:@width * 32;
+                    height: @height * 20 ;                 
+                }
+                input{
+                width: (@width *300);
+                height: @height * 28;
+              padding: (@height * 5) 0 (@height * 5) (@width * 32);
+                border-radius: @width * 15;
+                background-color: #f2f2f2;
+            }
+            
+         
+            }
+               
+            .search_delete{
+                text-align: center;
+                line-height:@height * 28;
+                width: (@width * 50);
+                height: @height * 28;
+                font-size:@width * 14;
+            }
+        }
+        .below{
+            .search_history{
+            display: none;
+             padding: (@height * 12) (@width * 13) (@height *7) (@width*13);
+             width: 100%;
+             height: @height * 80;
+             font-size: @width * 16;
+             .history{
+                 p{
+                     margin-bottom: (@height * 7) ;
+                 }
+             }
+             
+             ul{
+                 overflow: hidden;
+                 height: @height * 40;
+                  li{
+                    float:left;
+                    margin-left: @width * 12;
+                    margin-bottom: @height * 9;
+                    width: @width *100;
+                    height: @height *35;
+                    border-radius: @height*22.5;
+                    text-align: center;
+                    line-height: @height *35;
+                    background-color: #f2f2f2;
+                }
+             }
+        }
+        .search_city{
+            margin-top:@height * 3;
+            padding: (@height * 12) (@width * 13) (@height *7) (@width*13);
+            width: 100%;
+            font-size: @width * 16;
+            .pop_city{
+                height: @height * 200;
+                p{
+                    margin-bottom: (@height * 7) ;
+                }
+                li{
+                    float:left;
+                    margin-left: @width * 12;
+                    margin-bottom: @height * 9;
+                    width: @width *100;
+                    height: @height *35;
+                    border-radius: @height*22.5;
+                    text-align: center;
+                    line-height: @height *35;
+                    background-color: #f2f2f2;
+                }
+            }
+        }
+        
+    }
+        
+    }
+  
+}

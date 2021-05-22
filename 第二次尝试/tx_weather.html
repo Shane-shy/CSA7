@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather</title>
+    <script src="tx_weather.js" type="text/javascript"></script>
+    <script src="../../../echarts.min.js"></script>
+    <link rel="stylesheet" href="tx_base.css">
+    <link rel="stylesheet" href="tx_weather.css">
+    <link rel="stylesheet" href="../iconfont/download/font_nav/iconfont.css">
+    <link rel="stylesheet" href="../iconfont/download/font_footer/iconfont.css">
+    <link rel="stylesheet" href="../iconfont/download/font_bin/iconfont.css">
+    <link rel="stylesheet" href="../iconfont/methods/iconfont.css">
+</head>
+
+<body>
+    <!-- 基本框架 -->
+    <div class="all">
+        <!-- 头部导航栏 -->
+        <nav>
+            <a src="javascript:;" class="iconfont btn-return f_left clearfix">&#xe641;</a>
+            <p id="location_top" class="iconfont location f_left clearfix">
+                <span>&#xe608;</span>
+                <span id="city">--</span>
+            </p>
+            <a src="javascript:;" class="iconfont btn-share f_left clearfix">&#xe61f;</a>
+            <div class="cover"></div>
+            <div class="methods" style="width:100vw">
+                <ul class="clearfix">
+                    <li class="f_left">
+                        <a src="javascript:;" class="iconfont ">&#xe62b;</a>
+                        <p>朋友</p>
+                    </li>
+                    <li class="f_left">
+                        <a src="javascript:;" class="iconfont ">&#xe667;</a>
+                        <p>朋友圈</p>
+                    </li>
+                    <li class="f_left">
+                        <a src="javascript:;" class="iconfont ">&#xe614;</a>
+                        <p>QQ</p>
+                    </li>
+                    <li class=" f_left">
+                        <a src="javascript:;" class="iconfont">&#xe62e;</a>
+                        <p>QQ空间</p>
+                    </li>
+                    <li class="f_left">
+                        <a src="javascript:;" class="iconfont ">&#xe67a;</a>
+                        <p>微博</p>
+                    </li>
+                </ul>
+                <button class="delete_nav f_left">取消</button>
+            </div>
+        </nav>
+        <!-- 中间图片部分 -->
+        <div class="pic clearfix">
+            <div class="cover"></div>
+            <div class="box_left">
+                <div class="clearfix">
+                    <a id="x" href="javascript:;" style="color: rgb(0, 0, 0);">×</a>
+                    <h2 id="titl">空气质量指数</h2>
+                    <h1 id="val">--</h1>
+                    <p id="level_in">--</p>
+                </div>
+                <ul id="detal" class="clearfix">
+                    <li class="f_left no fLine">
+                        <p class="val">--</p>
+                        <p class="titl">PM2.5</p>
+                    </li>
+                    <li class="f_left fLine ">
+                        <p class="val">--</p>
+                        <p class="titl">PM10</p>
+                    </li>
+                    <li class="f_left fLine">
+                        <p class="val">--</p>
+                        <p class="titl">SO2</p>
+                    </li>
+                    <li class="f_left no ">
+                        <p class="val">--</p>
+                        <p class="titl">NO2</p>
+                    </li>
+                    <li class="f_left">
+                        <p class="val">--</p>
+                        <p class="titl">O3</p>
+                    </li>
+                    <li class="f_left">
+                        <p class="val">--</p>
+                        <p class="titl">CO</p>
+                    </li>
+                </ul>
+                <img src="../iconfont/box_left.png" alt="">
+            </div>
+            <div id="Box" class="f_left box_2_left">
+                <p class="value">--</p>
+                <p class="level">--</p>
+            </div>
+            <p class="temp ">--</p>
+            <p class="weather_condition ">--</p>
+            <p class="more">------</p>
+            <p class="tips">天暗下来，你就是光~</p>
+        </div>
+        <!-- 今明两天天气 -->
+        <div class="weather_box">
+            <div class="weather_today f_left  clearfix">
+                <div class="weather_date f_left  ">今天</div>
+                <div class="weather_degree f_right">°</div>
+                <div class="weather_temp f_right  ">--</div>
+
+                <div class="weather_cdt ">--</div>
+                <img src="" alt="加载失败">
+            </div>
+            <div class="weather_tomorrow f_left   clearfix">
+                <div class="weather_date f_left ">明天</div>
+                <div class="weather_degree f_right">°</div>
+                <div class="weather_temp f_right ">--</div>
+                <div class="weather_cdt ">--</div>
+                <img src="" alt="加载失败">
+            </div>
+        </div>
+        <!-- 时刻天气 -->
+        <div class="current_weather">
+            <div class="slide">
+                <ul>
+                    <li class="f_left clearfix">
+                        <p class="current_time"></p>
+                        <img id="current_img" src="" alt="加载失败">
+                        <p class="current_degree"></p>
+                    </li>
+                    <li class="f_left clearfix">
+                        <p class="current_time"></p>
+                        <img id="current_img" src="" alt="加载失败">
+                        <p class="current_degree"></p>
+                    </li>
+                    <li class="f_left clearfix">
+                        <p class="current_time"></p>
+                        <img id="current_img" src="" alt="加载失败">
+                        <p class="current_degree"></p>
+                    </li>
+                    <li class="f_left clearfix">
+                        <p class="current_time"></p>
+                        <img id="current_img" src="" alt="加载失败">
+                        <p class="current_degree"></p>
+                    </li>
+                    <li class="f_left clearfix">
+                        <p class="current_time"></p>
+                        <img id="current_img" src="" alt="加载失败">
+                        <p class="current_degree"></p>
+                    </li>
+                    <li class="f_left clearfix">
+                        <p class="current_time"></p>
+                        <img id="current_img" src="" alt="加载失败">
+                        <p class="current_degree"></p>
+                    </li>
+                    <li class="f_left clearfix">
+                        <p class="current_time"></p>
+                        <img id="current_img" src="" alt="加载失败">
+                        <p class="current_degree"></p>
+                    </li>
+                    <li class="f_left clearfix">
+                        <p class="current_time"></p>
+                        <img id="current_img" src="" alt="加载失败">
+                        <p class="current_degree"></p>
+                    </li>
+                    <li class="f_left clearfix">
+                        <p class="current_time"></p>
+                        <img id="current_img" src="" alt="加载失败">
+                        <p class="current_degree"></p>
+                    </li>
+                    <li class="f_left clearfix">
+                        <p class="current_time"></p>
+                        <img id="current_img" src="" alt="加载失败">
+                        <p class="current_degree"></p>
+                    </li>
+                    <li class="f_left clearfix">
+                        <p class="current_time"></p>
+                        <img id="current_img" src="" alt="加载失败">
+                        <p class="current_degree"></p>
+                    </li>
+                    <li class="f_left clearfix">
+                        <p class="current_time"></p>
+                        <img id="current_img" src="" alt="加载失败">
+                        <p class="current_degree"></p>
+                    </li>
+                    <li class="f_left clearfix">
+                        <p class="current_time"></p>
+                        <img id="current_img" src="" alt="加载失败">
+                        <p class="current_degree"></p>
+                    </li>
+                    <li class="f_left clearfix">
+                        <p class="current_time"></p>
+                        <img id="current_img" src="" alt="加载失败">
+                        <p class="current_degree"></p>
+                    </li>
+                    <li class="f_left clearfix">
+                        <p class="current_time"></p>
+                        <img id="current_img" src="" alt="加载失败">
+                        <p class="current_degree"></p>
+                    </li>
+                    <li class="f_left clearfix">
+                        <p class="current_time"></p>
+                        <img id="current_img" src="" alt="加载失败">
+                        <p class="current_degree"></p>
+                    </li>
+                    <li class="f_left clearfix">
+                        <p class="current_time"></p>
+                        <img id="current_img" src="" alt="加载失败">
+                        <p class="current_degree"></p>
+                    </li>
+                    <li class="f_left clearfix">
+                        <p class="current_time"></p>
+                        <img id="current_img" src="" alt="加载失败">
+                        <p class="current_degree"></p>
+                    </li>
+                    <li class="f_left clearfix">
+                        <p class="current_time"></p>
+                        <img id="current_img" src="" alt="加载失败">
+                        <p class="current_degree"></p>
+                    </li>
+                    <li class="f_left clearfix">
+                        <p class="current_time"></p>
+                        <img id="current_img" src="" alt="加载失败">
+                        <p class="current_degree"></p>
+                    </li>
+                    <li class="f_left clearfix">
+                        <p class="current_time"></p>
+                        <img id="current_img" src="" alt="加载失败">
+                        <p class="current_degree"></p>
+                    </li>
+                    <li class="f_left clearfix">
+                        <p class="current_time"></p>
+                        <img id="current_img" src="" alt="加载失败">
+                        <p class="current_degree"></p>
+                    </li>
+                    <li class="f_left clearfix">
+                        <p class="current_time"></p>
+                        <img id="current_img" src="" alt="加载失败">
+                        <p class="current_degree"></p>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!-- 折线图 -->
+        <div class="weather_predict">
+            <div id="echart_up"></div>
+            <div id="echart_down"></div>
+            <ul class="clearfix">
+                <li class="f_left">
+                    <p id="weeks">--</p>
+                    <p id="date">--</p>
+                    <div class="day">
+                        <p id="weather_cdt_day">--</p>
+                        <img id="day_img" src="" alt="加载失败">
+                    </div>
+                    <div class="night">
+                        <img id="night_img" src="" alt="加载失败">
+                        <p id="weather_cdt_night">--</p>
+                    </div>
+                    <p id="wind_direction" class="wind">--</p>
+                    <p id="wind_level" class="wind">--</p>
+                </li>
+                <li class="f_left">
+                    <p id="weeks">--</p>
+                    <p id="date">--</p>
+                    <div class="day">
+                        <p id="weather_cdt_day">--</p>
+                        <img id="day_img" src="" alt="加载失败">
+                    </div>
+                    <div class="night">
+                        <img id="night_img" src="" alt="加载失败">
+                        <p id="weather_cdt_night">--</p>
+                    </div>
+                    <p id="wind_direction" class="wind">--</p>
+                    <p id="wind_level" class="wind">--</p>
+                </li>
+                <li class="f_left">
+                    <p id="weeks">--</p>
+                    <p id="date">--</p>
+                    <div class="day">
+                        <p id="weather_cdt_day">--</p>
+                        <img id="day_img" src="" alt="加载失败">
+                    </div>
+                    <div class="night">
+                        <img id="night_img" src="" alt="加载失败">
+                        <p id="weather_cdt_night">--</p>
+                    </div>
+                    <p id="wind_direction" class="wind">--</p>
+                    <p id="wind_level" class="wind">--</p>
+                </li>
+                <li class="f_left">
+                    <p id="weeks">--</p>
+                    <p id="date">--</p>
+                    <div class="day">
+                        <p id="weather_cdt_day">--</p>
+                        <img id="day_img" src="" alt="加载失败">
+                    </div>
+                    <div class="night">
+                        <img id="night_img" src="" alt="加载失败">
+                        <p id="weather_cdt_night">--</p>
+                    </div>
+                    <p id="wind_direction" class="wind">--</p>
+                    <p id="wind_level" class="wind">--</p>
+                </li>
+                <li class="f_left">
+                    <p id="weeks">--</p>
+                    <p id="date">--</p>
+                    <div class="day">
+                        <p id="weather_cdt_day">--</p>
+                        <img id="day_img" src="" alt="加载失败">
+                    </div>
+                    <div class="night">
+                        <img id="night_img" src="" alt="加载失败">
+                        <p id="weather_cdt_night">--</p>
+                    </div>
+                    <p id="wind_direction" class="wind">--</p>
+                    <p id="wind_level" class="wind">--</p>
+                </li>
+                <li class="f_left">
+                    <p id="weeks">--</p>
+                    <p id="date">--</p>
+                    <div class="day">
+                        <p id="weather_cdt_day">--</p>
+                        <img id="day_img" src="" alt="加载失败">
+                    </div>
+                    <div class="night">
+                        <img id="night_img" src="" alt="加载失败">
+                        <p id="weather_cdt_night">--</p>
+                    </div>
+                    <p id="wind_direction" class="wind">--</p>
+                    <p id="wind_level" class="wind">--</p>
+                </li>
+                <li class="f_left">
+                    <p id="weeks">--</p>
+                    <p id="date">--</p>
+                    <div class="day">
+                        <p id="weather_cdt_day">--</p>
+                        <img id="day_img" src="" alt="加载失败">
+                    </div>
+                    <div class="night">
+                        <img id="night_img" src="" alt="加载失败">
+                        <p id="weather_cdt_night">--</p>
+                    </div>
+                    <p id="wind_direction" class="wind">--</p>
+                    <p id="wind_level" class="wind">--</p>
+                </li>
+            </ul>
+        </div>
+        <!-- 底部小盒子（类似轮播图） -->
+
+        <div class="bBox clearfix">
+            <div class="cover"></div>
+            <div class="window" style="width:75vw">
+                <h3 class="title">--</h3>
+                <p class="infor">--</p>
+                <button class="btn_close">我知道了</button>
+            </div>
+            <div class="window" style="width:75vw">
+                <h3 class="title">--</h3>
+                <p class="infor">--</p>
+                <button class="btn_close">我知道了</button>
+            </div>
+            <div class="window" style="width:75vw">
+                <h3 class="title">--</h3>
+                <p class="infor">--</p>
+                <button class="btn_close">我知道了</button>
+            </div>
+            <div class="window" style="width:75vw">
+                <h3 class="title">--</h3>
+                <p class="infor">--</p>
+                <button class="btn_close">我知道了</button>
+            </div>
+            <div class="window" style="width:75vw">
+                <h3 class="title">--</h3>
+                <p class="infor">--</p>
+                <button class="btn_close">我知道了</button>
+            </div>
+            <div class="window" style="width:75vw">
+                <h3 class="title">--</h3>
+                <p class="infor">--</p>
+                <button class="btn_close">我知道了</button>
+            </div>
+            <div class="window" style="width:75vw">
+                <h3 class="title">--</h3>
+                <p class="infor">--</p>
+                <button class="btn_close">我知道了</button>
+            </div>
+            <div class="window" style="width:75vw">
+                <h3 class="title">--</h3>
+                <p class="infor">--</p>
+                <button class="btn_close">我知道了</button>
+            </div>
+            <div class="window" style="width:75vw">
+                <h3 class="title">--</h3>
+                <p class="infor">--</p>
+                <button class="btn_close">我知道了</button>
+            </div>
+            <div class="window" style="width:75vw">
+                <h3 class="title">--</h3>
+                <p class="infor">--</p>
+                <button class="btn_close">我知道了</button>
+            </div>
+            <div class="window" style="width:75vw">
+                <h3 class="title">--</h3>
+                <p class="infor">--</p>
+                <button class="btn_close">我知道了</button>
+            </div>
+            <div class="window" style="width:75vw">
+                <h3 class="title">--</h3>
+                <p class="infor">--</p>
+                <button class="btn_close">我知道了</button>
+            </div>
+            <div class="window" style="width:75vw">
+                <h3 class="title">--</h3>
+                <p class="infor">--</p>
+                <button class="btn_close">我知道了</button>
+            </div>
+            <div class="window" style="width:75vw">
+                <h3 class="title">--</h3>
+                <p class="infor">--</p>
+                <button class="btn_close">我知道了</button>
+            </div>
+            <div class="window" style="width:75vw">
+                <h3 class="title">--</h3>
+                <p class="infor">--</p>
+                <button class="btn_close">我知道了</button>
+            </div>
+            <div class="window" style="width:75vw">
+                <h3 class="title">--</h3>
+                <p class="infor">--</p>
+                <button class="btn_close">我知道了</button>
+            </div>
+            <div class="slide_box">
+                <ul class="fPage clearfix f_left">
+                    <li class="box f_left">
+                        <div class="iconfont tips_bottom">&#xe606;</div>
+                        <p id="f_line">--</p>
+                        <p id="s_line">穿衣</p>
+                    </li>
+                    <li class="box f_left">
+                        <div class="iconfont tips_bottom">&#xe633;</div>
+                        <p id="f_line">--</p>
+                        <p id="s_line">雨伞</p>
+                    </li>
+                    <li class="box f_left">
+                        <div class="iconfont tips_bottom">&#xe66f;</div>
+                        <p id="f_line">--</p>
+                        <p id="s_line">感冒</p>
+                    </li>
+                    <li class="box f_left">
+                        <div class="iconfont tips_bottom">&#xe624;</div>
+                        <p id="f_line">--</p>
+                        <p id="s_line">洗车</p>
+                    </li>
+                    <li class="box f_left">
+                        <div class="iconfont tips_bottom">&#xf112;</div>
+                        <p id="f_line">--</p>
+                        <p id="s_line">运动</p>
+                    </li>
+                    <li class="box f_left">
+                        <div class="iconfont tips_bottom">&#xe611;</div>
+                        <p id="f_line">--</p>
+                        <p id="s_line">防晒</p>
+                    </li>
+                    <li class="box f_left">
+                        <div class="iconfont tips_bottom">&#xe625;</div>
+                        <p id="f_line">--</p>
+                        <p id="s_line">钓鱼</p>
+                    </li>
+                    <li class="box f_left">
+                        <div class="iconfont tips_bottom">&#xe615;</div>
+                        <p id="f_line">--</p>
+                        <p id="s_line">旅游</p>
+                    </li>
+                </ul>
+                <ul class="sPage clearfix f_right">
+                    <li class="box f_left">
+                        <div class="iconfont tips_bottom">&#xe695;</div>
+                        <p id="f_line">--</p>
+                        <p id="s_line">交通</p>
+                    </li>
+                    <li class="box f_left">
+                        <div class="iconfont tips_bottom">&#xe607;</div>
+                        <p id="f_line">--</p>
+                        <p id="s_line">空气污染扩散条件指数</p>
+                    </li>
+                    <li class="box f_left">
+                        <div class="iconfont tips_bottom">&#xe61c;</div>
+                        <p id="f_line">--</p>
+                        <p id="s_line">舒适度</p>
+                    </li>
+                    <li class="box f_left">
+                        <div class="iconfont tips_bottom">&#xe655;</div>
+                        <p id="f_line">--</p>
+                        <p id="s_line">晾晒</p>
+                    </li>
+                    <li class="box f_left">
+                        <div class="iconfont tips_bottom">&#xe605;</div>
+                        <p id="f_line">--</p>
+                        <p id="s_line">化妆</p>
+                    </li>
+                    <li class="box f_left">
+                        <div class="iconfont tips_bottom">&#xe673;</div>
+                        <p id="f_line">--</p>
+                        <p id="s_line">晨练</p>
+                    </li>
+                    <li class="box f_left">
+                        <div class="iconfont tips_bottom">&#xe665;</div>
+                        <p id="f_line">--</p>
+                        <p id="s_line">过敏</p>
+                    </li>
+                    <li class="box f_left">
+                        <div class="iconfont tips_bottom">&#xe61b;</div>
+                        <p id="f_line">--</p>
+                        <p id="s_line">中暑</p>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- 底部小盒子下面的小点 -->
+        <div class="tab-content">
+            <span id="f_spot" class="current"></span>
+            <span id="s_spot" class=""></span>
+        </div>
+
+        <!-- 结尾 -->
+        <footer>
+            <p id="source">
+                <a href="javascript:;">数据来源于中国天气网</a>
+            </p>
+            <p id="copyright">Copyright © 1998 - 2021 Tencent. All Rights Reserved</p>
+        </footer>
+    </div>
+    <!-- 交互 -->
+    <div class="else">
+        <!-- 搜索界面 -->
+        <div class="search">
+            <!-- 搜索框 -->
+            <div class="search_area clearfix">
+                <p class="search_delete f_right">取消</p>
+                <div>
+                    <input type="text" placeholder="搜索地区" class="f_right">
+                    <img src="../iconfont/download/font_nav/glass.svg" alt="加载失败" class="glass">
+                </div>
+            </div>
+            <div class="below">
+                <div class="search_history">
+                    <!-- 历史记录 -->
+                    <div class="history  clearfix">
+                        <div class="clearfix">
+                            <p class="f_left">历史记录</p>
+                            <div class="iconfont bin f_right">&#xe682;</div>
+                        </div>
+                        <ul class="history_city"></ul>
+                    </div>
+
+                </div>
+                <!-- 热门城市 -->
+                <div class="search_city">
+                    <div class="pop_city">
+                        <p>热门城市</p>
+                        <ul>
+                            <li>北京</li>
+                            <li>上海</li>
+                            <li>广州</li>
+                            <li>深圳</li>
+                            <li>郑州</li>
+                            <li>西安</li>
+                            <li>南京</li>
+                            <li>杭州</li>
+                            <li>武汉</li>
+                            <li>成都</li>
+                            <li>沈阳</li>
+                            <li>天津</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
+
+</html>

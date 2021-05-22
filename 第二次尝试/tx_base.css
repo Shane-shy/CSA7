@@ -1,0 +1,44 @@
+/* 公共样式 */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    /*用于去除点击高亮*/
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: #b2b2b2;
+}
+
+ul {
+    list-style: none;
+}
+
+input {
+    outline: none;
+    /*清除点击时，边框加粗*/
+    border: none;
+}
+
+
+/* 特别样式 */
+
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.f_left {
+    float: left;
+}
+
+.f_right {
+    float: right;
+}

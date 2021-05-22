@@ -1,0 +1,138 @@
+//  约定：每部分间的间隙为15vh
+ 
+ 
+ @wtransform : (100vw / 375);  //除法时要加括号
+ @htransform : (100vh / 667);
+*{
+    padding: 0;
+    margin: 0;
+    font-size:@wtransform * 12;
+    
+}
+body{
+    background-color: #f4f4f4;
+}
+// 第一部分开始
+.first {
+    position: relative;
+    width: 100%;
+    height: @htransform * 475;
+    background-image: url("iconfont/weather-background/xue.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: transparent;
+    .nav{
+        width: 100%;
+        height: @htransform * 40;
+        .iconfont{
+            position: absolute;
+            font-size: @wtransform * 22;
+            color: white;
+        }
+        .fanhui{
+            top:@htransform * 10;
+            left: @wtransform * 1;
+        }
+        .weizhi {
+            top:@htransform * 10;
+            left: @wtransform * 30;
+            height: @htransform * 15;
+            width: @wtransform * 305;
+            text-align: center;
+            font-size: @wtransform * 16;
+            
+        }
+        .fenxiang{
+            top: @htransform * 10;
+            right: @wtransform * 3;
+        }
+    }
+    .time {
+        width: 100%;
+        height: @htransform * 15;
+        color: white;
+        text-align: center;
+    }
+    .box{
+        position:absolute;
+        border:@htransform solid rgb(105, 104, 104);
+        border-radius:@htransform * 8;
+        top: @htransform * 66;
+        left: @wtransform * 8;
+        height: @htransform * 44;
+        width: @wtransform * 37;
+        background-color: #a3d765;
+        .celan{
+            color:white;
+            text-align: center;
+            padding-top:@htransform * 3;
+        }
+    }
+    #dangqian{
+        p{
+            position: absolute;
+            width: 100vw;
+            font-size: @wtransform * 16;
+            text-align: center;
+            color:white;
+        }
+        .temprature{
+            top:@htransform * 107;
+            padding-left: @wtransform * 12;
+            font-size: @wtransform * 65;
+        }
+        .tianqi{
+            top:@htransform * 190;
+            font-size: @wtransform * 20;
+        }
+        .tips{
+            top: @htransform * 262;
+        }
+        
+    }
+    .jinmingtianqi{
+        position: relative;
+        top: @htransform * 418;
+        width: 100%;
+        height: @htransform * 100;
+        background-color: #fff;
+        .today{
+            position: absolute; 
+            top:@htransform * 25;
+            left: 0vw;
+            width:50%;
+            height: @htransform * 50;
+            background-color: pink;
+        }
+        .tomorrow{
+            position: absolute;
+            top:@htransform * 25;
+            right: 0vw; 
+            width: 50% ;
+            height: @htransform * 50;
+            background-color: purple;
+        }
+    }
+    
+}
+
+// 第一部分结束
+
+
+// 第二部分开始
+.second{
+    position: relative;
+    top: @htransform * 115;
+    height: @htransform *140;
+    background-color: lightblue;
+}
+// 第二部分结束
+
+// 第三部分开始
+.third{
+    position: relative;
+    top: @htransform *130;
+    height:  @htransform * 400;
+    background-color: rgb(58, 218, 119);
+}
+// 第三部分结束
